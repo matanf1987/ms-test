@@ -2,9 +2,10 @@
 
   <div id="productsList">
     <div>
-      <div style="display: flex">
+      <div style="display: flex ; padding: 10px;">
         <div style="margin-right: 15px;"><a class="myButton">+ Add</a></div>
-        <div style="margin-right: 15px;"><i class="fa fa-search"></i><input type="text" [(ngModel)]="queryString" placeholder="search products"></div>
+        <div style="margin-right: 15px;"><i class="fa fa-search"></i><input type="text" [(ngModel)]="queryString"
+            placeholder="search products"></div>
         <div>
           Sory by
           <select (change)="onChangeOrderBy($event.target.value)">
@@ -13,8 +14,6 @@
           </select>
         </div>
         <br style="clear: left;" />
-      </div>
-      <div class="input-container">
       </div>
     </div>
 
