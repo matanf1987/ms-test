@@ -1,0 +1,59 @@
+<div id="products" style="width:100%">
+
+  <div id="productsList">
+    <div>
+      <div style="display: flex">
+        <div style="margin-right: 15px;"><a class="myButton">+ Add</a></div>
+        <div style="margin-right: 15px;"><i class="fa fa-search"></i><input type="text" [(ngModel)]="queryString" placeholder="search products"></div>
+        <div>
+          Sory by
+          <select (change)="onChangeOrderBy($event.target.value)">
+            <option value="productName">Pruduct Name</option>
+            <option value="price">Price</option>
+          </select>
+        </div>
+        <br style="clear: left;" />
+      </div>
+      <div class="input-container">
+      </div>
+    </div>
+
+    <div class="product-box" *ngFor="let product of products | filter:queryString " (click)="displayProduct(product)">
+      <img src="{{product.thumbnailUrl}}" width="60" height="60">
+      <div class="product-info">
+        <div class="product-name">
+          {{product.name}}
+        </div>
+        <div class="product-description">
+          {{product.description}}
+        </div>
+      </div>
+      <div>
+        <button>Delete</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="productsDetails">
+
+    <fieldset>
+      <legend>{{chosenProductName}}</legend>
+      <form class="form-inline" [formGroup]="productDetailsForm">
+
+        <img [src]="chosenProductThumbmail" width="80" height="80">
+        <label for="name">Name</label>
+        <input type="text" id="productName" placeholder="Enter Name" name="productName" formControlName="name">
+        <label for="description">Description</label>
+        <textarea rows="6" cols="50" formControlName="description"></textarea>
+        <label for="price">Price</label>
+
+        <input type="text" id="productPrice" placeholder="Enter Price" name="productPrice" style="width:150px;"
+          formControlName="price">
+        <button type="button" class="" [disabled]="!productDetailsForm.valid" (click)="saveProduct();">Save</button>
+      </form>
+    </fieldset>
+
+  </div>
+
+</div>

@@ -1,0 +1,176 @@
+
+@media screen and (min-width: 900px) {
+    #productsList {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #productsDetails {
+        margin-top:52px;
+        width:50%;
+        padding-left: 20px;
+
+        fieldset {
+            width:90%;
+            height: 500px;
+        }
+    }
+
+    #products {
+        display: flex;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+
+
+    #productsList {
+        width:100%;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #productsDetails {
+     display: none;
+    }
+
+    #products {
+        display: flex;
+    }
+  }
+
+  //@media screen and (max-width: 1920px) and (min-width: 600px) {
+        
+
+        .myButton {
+            -moz-box-shadow: 2px 2px 0px 1px #5f7559;
+            -webkit-box-shadow: 2px 2px 0px 1px #5f7559;
+            box-shadow: 2px 2px 0px 1px #5f7559;
+            background-color: #5ecc7b;
+            border: 1px solid #18ab29;
+            display: inline-block;
+            cursor: pointer;
+            color: #0a000a;
+            font-family: Arial;
+            font-size: 17px;
+			height: 20px;
+            padding: 1px 4px;
+            text-decoration: none;
+            text-shadow: -1px 0px 0px #2f6627;
+        }
+
+        .myButton:hover {
+            background-color: #5cbf2a;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        * {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.product-box {
+    border: 2px solid black; 
+    min-height:100px;
+    width:90%;
+    margin-bottom: 15px;
+    display: flex;
+    cursor: pointer;
+
+    .product-info {
+        width:70%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+
+        .product-name {
+            position: relative;
+            top:10px;
+            font-weight: bold;
+        }
+
+        .product-description {
+            position: relative;
+            top:15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    button {
+        position: relative;
+        background-color: #ffb340;
+        border-color: black;
+        top:60px;
+        right:10px;
+    }
+
+    img {
+        
+        width:80px;
+        height:80px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+}
+
+
+
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+  
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .form-inline button {
+    background-color:#5cbf2a;
+    color:black;
+    width:150px;
+    float: right;
+  }
+  
+   .form-inline button:disabled {
+        background-color: grey;
+   }
+  
+   .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
